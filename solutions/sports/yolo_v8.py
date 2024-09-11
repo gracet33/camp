@@ -232,6 +232,7 @@ if RESUME_EPOCH > 0:
         yolo.model,
         optimizer,
         lr_scheduler,
+        scaler,
         storage_options,
     )
 
@@ -339,6 +340,7 @@ for i in range(epochs, n_epochs):
             model=yolo.model,
             optimizer=optimizer,
             scheduler=lr_scheduler,
+            scaler=scaler,
             storage_options=storage_options,
         )
 
